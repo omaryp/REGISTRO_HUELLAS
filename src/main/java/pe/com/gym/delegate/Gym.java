@@ -1,5 +1,6 @@
 
 package pe.com.gym.delegate;
+import java.util.List;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -10,6 +11,7 @@ import javax.naming.NamingException;
 
 import pe.com.gym.dto.ClienteDTO;
 import pe.com.gym.entidades.PlantillaHuella;
+import pe.com.gym.entidades.Termino;
 import pe.com.gym.facade.FacadeGYMRemote;
 
 
@@ -21,7 +23,7 @@ public enum Gym {
 	INSTANCE;
     FacadeGYMRemote facadeRemote;
     Logger logger = Logger.getLogger(Gym.class.getName());
-    
+    	
     private Gym() {
         try {
         	Properties properties = new Properties();
@@ -47,4 +49,8 @@ public enum Gym {
     	return facadeRemote.obtenerClienteDNI(dni);
     }
     
+    public List<Termino> getTerminos(){
+    	return facadeRemote.getTerminos();
+    }
+        
 }

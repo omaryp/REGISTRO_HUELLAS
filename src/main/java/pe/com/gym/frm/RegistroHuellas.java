@@ -1,6 +1,7 @@
 package pe.com.gym.frm;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Image;
@@ -99,12 +100,13 @@ public class RegistroHuellas extends JFrame {
 	public void init_componentes() {
 		lbl_datos_usu = new JLabel(
 				"Bienvenido : Omar Antonio Yarleque Peña - Asistente de caja");
-		lbl_dni = new JLabel("DNI : ");
+		lbl_dni = new JLabel("<html><span style='font-size : 11px'>DNI : </span></html>");
 		lbl_muestra1 = new JLabel();
 		lbl_muestra2 = new JLabel();
 		lbl_muestra3 = new JLabel();
 		lbl_muestra4 = new JLabel();
 		txt_dni = new JTextField(20);
+		txt_dni.setPreferredSize(new Dimension(100, 30));
 		txt_area = new JTextArea(13,80);
 		scrl_area = new JScrollPane(txt_area);
 		btn_grabar = new JButton("Grabar");
